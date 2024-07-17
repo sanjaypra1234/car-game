@@ -1,0 +1,75 @@
+*{
+padding : 0;
+margin : 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./delhi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.road{
+    background-color: black;
+    width: 200%;
+    height: 100px;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-1000px); 
+    animation: roadmove 2s linear infinite;
+}
+
+@keyframes roadmove{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.line{
+    width: 200px;
+    height: 5px;
+    background-color: #fff;
+    margin: 0 30px; 
+}
+
+.car{
+    position: absolute;
+    bottom: -5%;
+    right: 0%;
+    z-index: 99;
+    animation: carstart 8s linear infinite;  */
+}
+
+.tyre{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    bottom: 6%;
+    right: 4.5%;
+    z-index: 99;
+    animation: tyrerotate .6s linear infinite;
+
+}
+.tyre2{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    bottom: 6%;
+    right: 16.3%;
+    z-index: 99;
+    animation: tyrerotate .6s linear infinite;
+}
+
+@keyframes tyrerotate{
+    100%{
+        rotate: -360deg;
+    }
+}
